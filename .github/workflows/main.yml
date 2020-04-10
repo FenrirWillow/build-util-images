@@ -21,7 +21,7 @@ jobs:
         run: docker tag fenrirwillow/build-util-images fenrirwillow/build-util-images:node-${{ matrix.node-version }}-terraform-${{ matrix.terraform-version }}
 
       - name: Docker Login
-        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USER }} -password-stdin
+        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
 
       - name: Docker push
         run: docker push fenrirwillow/build-util-images:node-${{ matrix.node-version }}-terraform-${{ matrix.terraform-version }}
