@@ -1,5 +1,7 @@
 # Build Util Images
 
+![Master CI Pipeline](https://github.com/FenrirWillow/build-util-images/workflows/Master%20CI%20Pipeline/badge.svg)
+
 ---
 
 ## Overview
