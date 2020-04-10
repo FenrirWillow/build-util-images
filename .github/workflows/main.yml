@@ -1,3 +1,5 @@
+name: CI Pipeline
+
 on: [push]
 
 jobs:
@@ -10,7 +12,7 @@ jobs:
         terraform-version: [0.12.24, 0.11.14]
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Docker Build
         run: docker --version
