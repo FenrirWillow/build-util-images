@@ -4,8 +4,8 @@ ARG node-version
 ARG terraform-version
 
 RUN apt-get update
-RUN apt-get install build-essential
+RUN apt-get install -y build-essential
 RUN apt-get clean
 
-RUN echo "Terraform version: ${node-version}}"
-RUN echo "Terraform version: ${terraform-version}"
+RUN echo "Node target version: ${node-version}}"
+RUN echo "Terraform target version: ${terraform-version}"
