@@ -15,6 +15,14 @@ RUN curl -L https://deb.nodesource.com/setup_${node_version}.x | bash -
 RUN apt-get install -y nodejs
 RUN node --version
 
+# Install Yarn
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update
+RUN apt-get install yarn
+RUN yarn --version
+
+
 # Install Terraform from the hashicorp releases
 RUN curl -O  https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
 RUN unzip terraform_${terraform_version}_linux_amd64.zip
