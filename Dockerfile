@@ -4,7 +4,7 @@ ARG node_version
 ARG terraform_version
 
 RUN apt-get update
-RUN apt-get install -y build-essential curl unzip git
+RUN apt-get install -y build-essential curl unzip git python3-pip
 RUN apt-get clean
 
 RUN echo "Node target version: ${node_version}"
@@ -22,9 +22,12 @@ RUN apt-get update
 RUN apt-get install yarn
 RUN yarn --version
 
-
 # Install Terraform from the hashicorp releases
 RUN curl -O  https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
 RUN unzip terraform_${terraform_version}_linux_amd64.zip
 RUN mv terraform /usr/local/bin/
 RUN terraform -version
+
+# Install AWS CLI version 1
+RUN pip3 install --upgrade awscli==1.14.5
+RUN aws --version
