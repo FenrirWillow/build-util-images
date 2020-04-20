@@ -29,5 +29,5 @@ RUN mv terraform /usr/local/bin/
 RUN terraform -version
 
 # Install AWS CLI version 1
-RUN pip3 install --upgrade awscli==1.14.5
+RUN pip3 install --upgrade awscli
 RUN aws --version
