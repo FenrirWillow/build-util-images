@@ -16,7 +16,7 @@ The repository is available publicly on [DockerHub](https://hub.docker.com/r/fen
 
 Tag | Node version | Terraform Version
 ---|---|---
-`node-12-terraform-0.12.29` | `12.18.4` | `0.13.4`
+`node-12-terraform-0.13.4` | `12.18.4` | `0.13.4`
 `node-12-terraform-0.12.29` | `12.18.4` | `0.12.29`
 `node-12-terraform-0.12.24` | `12.18.4` | `0.12.24`
 `node-12-terraform-0.11.14` | `12.18.4` | `0.11.14`
